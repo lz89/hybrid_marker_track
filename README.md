@@ -48,4 +48,5 @@ You should also modify options in `config/Settings.xml` accordingly.
 
 ## Licence ##
 This project is licensed under the BSD License - see the [LICENCE](LICENCE) file for details.
+
 IPPE, which is used in this project, is BSD licence. 
