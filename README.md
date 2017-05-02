@@ -31,6 +31,7 @@ Two types of marker can be tracked:
 2. In CMake, direct the source code to this root directory, and the binaries to the `build` directory. Then press configure then generate in CMake.
 3. Download test videos from:
 > https://d.pr/XDO5O (planar circular-dot)
+>
 > https://d.pr/r9DAp (cylindrical hybrid)
 
 4. In `src/main.cpp`, modify the video directory to where the videos was downloaded.
