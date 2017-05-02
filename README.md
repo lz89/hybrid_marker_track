@@ -1,7 +1,7 @@
 # Hybrid Marker Tracker #
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-green.svg)](https://opensource.org/licenses/BSD-3-Clause)
 ## Intro ##
-This is the C++ implementation of the paper: [L. Zhang, M. Ye, C. Chan, G.-Z. Yang, "Real-Time Surgical Tool Tracking and Pose Estimation using a Hybrid Cylindrical Marker" IJCARS. 2017.](http://rdcu.be/ql1V). 
+This is the C++ implementation of the paper: [L. Zhang, M. Ye, C. Chan, G.-Z. Yang, "Real-Time Surgical Tool Tracking and Pose Estimation using a Hybrid Cylindrical Marker" IJCARS. 2017](http://rdcu.be/ql1V). 
 We hope you find the tracker useful and if so please cite the paper:
 > @Article{Zhang2017,
 > author="Zhang, Lin and Ye, Menglong and Chan, Po-Ling and Yang, Guang-Zhong",
