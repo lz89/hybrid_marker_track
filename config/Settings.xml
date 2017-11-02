@@ -2,7 +2,7 @@
 <opencv_storage>
 
   <!-- HYBRID or CIRCULAR-->
-  <patternToUse>"CIRCULAR"</patternToUse>
+  <patternToUse>"HYBRID"</patternToUse>
   <!-- Size of planar circular-dot marker-->
   <Circular_BoardSize_Width>3</Circular_BoardSize_Width>
   <Circular_BoardSize_Height>7</Circular_BoardSize_Height>

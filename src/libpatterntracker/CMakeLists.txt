@@ -1,6 +1,6 @@
 # OpenCV
 include_directories(${OpenCV_INCLUDE_DIRS})
-include_directories( ${CMAKE_SOURCE_DIR}/src )
+include_directories( ${CMAKE_SOURCE_DIR}/src/libchessdetector )
 
 
 if(WIN32)

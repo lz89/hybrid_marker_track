@@ -314,7 +314,7 @@ bool TrackerCurvedot::DetectPattern(const cv::Mat& _img_gray,
 bool TrackerCurvedot::FindDots(cv::InputArray _image, cv::Size sym_patternSize, cv::Size asym_patternSize,
 							   cv::OutputArray _sym_centers, cv::OutputArray _asym_centers, 
 							   const cv::Ptr<cv::FeatureDetector> &blobDetector,
-							   std::vector<cv::Point2f> &chess_pts)
+							   const std::vector<cv::Point2f> &chess_pts)
 {
 	cv::Mat image = _image.getMat();
 	std::vector<cv::Point2f> sym_centers, asym_centers;

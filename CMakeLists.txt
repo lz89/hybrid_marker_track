@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8.11)
 
-if(POLICY CMP0020)
-  cmake_policy(SET CMP0020 NEW)
-endif()
+#if(POLICY CMP0020)
+#	cmake_policy(SET CMP0020 NEW)
+#endif()
 
 project(hybrid_marker_track)
 list( APPEND CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS}")
@@ -10,6 +10,7 @@ list( APPEND CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS}")
 # set(CMAKE_LIBRARY_PATH "C:\\Program Files (x86)\\Windows Kits\\8.0\\Lib\\win8\\um\\x64")
 
 # add_definitions(-DNOMINMAX)
+set(CMAKE_BUILD_TYPE Debug)
 
 set(OpenCV_STATIC OFF)
 
@@ -34,32 +35,21 @@ add_subdirectory(src/libchessdetector)
 
 
 include_directories(
-  ${CMAKE_CURRENT_BINARY_DIR}
-  ${CMAKE_CURRENT_SOURCE_DIR}/include
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/libpatterntracker
- # ${libpatterntracker_SOURCE_DIR}
+		${CMAKE_CURRENT_BINARY_DIR}
+		${CMAKE_CURRENT_SOURCE_DIR}/include
+		${CMAKE_CURRENT_SOURCE_DIR}/src/libpatterntracker
+		${CMAKE_CURRENT_SOURCE_DIR}/src/libchessdetector
 )
-
-# link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
-
 
 file(GLOB HEADER_FILES include/*.h)
 file(GLOB CXX_FILES src/*.cpp)
 
-# file(GLOB UI_FILES src/*.ui)
-# qt5_wrap_ui(UISrcs ${UI_FILES} )
-
 add_executable(hybrid_marker_track
-		${CXX_FILES} 
-		${HEADER_FILES} 
-		# ${UISrcs}
-)
-
-# qt5_use_modules(arius Core Gui Widgets)
+		${CXX_FILES}
+		${HEADER_FILES}
+		)
 
 target_link_libraries(hybrid_marker_track
-    ${OpenCV_LIBS}
-    # ${Matlab_LIBRARIES}
-    libpatterntracker
-    # frmgrab
-)
+		${OpenCV_LIBS}
+		libpatterntracker
+		)

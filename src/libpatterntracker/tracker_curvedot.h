@@ -16,7 +16,7 @@
 #define TRACKER_CURVEDOT_H
 
 #include "tracker_keydot.h"
-#include "libchessdetector/chess_detector.h"
+#include "chess_detector.h"
 
 class TrackerCurvedot : public TrackerKeydot
 {
@@ -45,7 +45,7 @@ public:
     bool FindDots( cv::InputArray _image, cv::Size sym_patternSize, cv::Size asym_patternSize,
         cv::OutputArray _sym_centers, cv::OutputArray _asym_centers, 
 		const cv::Ptr<cv::FeatureDetector> &blobDetector,
-		std::vector<cv::Point2f> &chess_pts = std::vector<cv::Point2f>());
+		const std::vector<cv::Point2f> &chess_pts = std::vector<cv::Point2f>());
 
 	// --- Tracking part ---
 	void initSymTrack(cv::Mat& _pre_gray, std::vector<cv::Point2f> _prev_dots);
@@ -67,7 +67,7 @@ public:
 	cv::Vec3f get_chess_line();
 
 	// get chess points
-	std::vector<cv::Point2f> TrackerCurvedot::get_chess_pts();
+	std::vector<cv::Point2f> get_chess_pts();
 
 	
 

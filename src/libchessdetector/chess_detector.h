@@ -2,7 +2,7 @@
     ChessDetector class
 	Wrapper for ChESS feature detector
 
-    2016-13-10 Lin Zhang
+    2016-12-10 Lin Zhang
     The Hamlyn Centre for Robotic Surgery,
     Imperial College, London
 */
@@ -32,7 +32,7 @@ public:
 		bool filterMinorOrientation;
 	};
 
-	ChessDetector(ChessDetector::Params &parameters = ChessDetector::Params());
+	ChessDetector(const ChessDetector::Params &parameters = ChessDetector::Params());
 
 	~ChessDetector();
 

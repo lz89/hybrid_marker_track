@@ -1,6 +1,5 @@
 #include "chess_detector.h"
 #include <opencv2/imgproc.hpp>
-#include <iostream>
 #include <opencv2/highgui.hpp>
 
 
@@ -12,7 +11,7 @@ ChessDetector::Params::Params()
 	filterMinorOrientation = true;
 }
 
-ChessDetector::ChessDetector(ChessDetector::Params &parameters) :
+ChessDetector::ChessDetector(const ChessDetector::Params &parameters) :
 	m_points (NULL),
 	m_img (NULL),
 	m_resp (NULL),

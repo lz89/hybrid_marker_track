@@ -1,6 +1,4 @@
 #include <opencv2/opencv.hpp>
-#include <string>
-#include "tracker_curvedot.h"
 #include "track_helper.h"
 
 using namespace std;
@@ -8,10 +6,8 @@ using namespace cv;
 
 int main(int argc, char *argv[])
 {
-	bool need_undistort = true;
 
-
-	string video_filename = "circular_test_video.mp4";	//hybrid_test_video
+	string video_filename = "hybrid_test_video.mp4";	//hybrid_test_video / circular_test_video
     VideoCapture vid_cap (video_filename);
 
 	if(!vid_cap.isOpened())
@@ -19,7 +15,7 @@ int main(int argc, char *argv[])
 		std::cout << "Cannot open: " << video_filename << std::endl;
 	}
 
-	TrackHelper track_helper("..\\config\\Settings.xml");
+	TrackHelper track_helper("../config/Settings.xml");
 
 	cv::namedWindow("marker tracking");
 	while (true)
